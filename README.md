@@ -19,7 +19,7 @@ ENTRYPOINT ["java","-jar","/app.jar"]
 
 ## Build Docker Image
 ```
-docker build --build-arg JAR_FILE=build/libs/*.jar -t springio/gs-spring-boot-docker .
+docker build --build-arg JAR_FILE=build/libs/*.jar -t arunkumartaneja/spring-docker .
 ```
 ## List all image
 ```
@@ -28,13 +28,30 @@ docker image ls
 
 ## Run Docker Image
 ```
-docker run -p 8080:8080 springio/gs-spring-boot-docker
+docker run -p 8080:8080 arunkumartaneja/spring-docker
 ```
 
-## shows running containers
+## Show running containers
 ```
 docker ps
 ```
+
+## Push image
+```
+dockerhub_username/repository_name[:tag]
+```
+
+```
+docker push arunkumartaneja/spring-docker
+```
+
+## Pull image
+```
+docker pull arunkumartaneja/spring-docker:latest
+```
+
+## Docker repo link
+https://hub.docker.com/r/arunkumartaneja/spring-docker
 
 ## Reference
 [spring-boot-and-docker-example-on-windows](https://nullbeans.com/spring-boot-and-docker-example-on-windows/)
